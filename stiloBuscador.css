@@ -1,0 +1,219 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout base */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #22224d;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 2rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #3498db;
+}
+
+/* Main */
+main {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    padding: 6rem 1rem;
+}
+
+/* Carrusel fullscreen */
+.carousel {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.carousel img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    filter: brightness(0.8) contrast(1.1) saturate(1.2);
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(34, 34, 77, 0.95);
+    color: white;
+    width: 100%;
+    margin-top: auto;
+    z-index: 2;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Caja azul */
+.caja-azul {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    background-color: rgba(52, 152, 219, 0.75); /* Azul transparente */
+    color: white;
+
+    border-radius: 12px;
+    backdrop-filter: blur(6px); /* efecto glass (opcional) */
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+
+/* Tipografía interna de la caja azul */
+.caja-azul h2 {
+    color: white;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+}
+
+.caja-azul p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.caja-azul a {
+    color: #ecf0f1;
+    text-decoration: underline;
+}
+
+.caja-azul a:hover {
+    color: #bdc3c7;
+}
+
+/* Estilos del buscador */
+.contenedor-Buscador {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contenedor-Buscador input[type="text"] {
+    flex: 1;
+    height: 48px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor-Buscador button {
+
+    height: 48px;
+    width: 52px;
+
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu li {
+        margin: 0.5rem 1rem;
+    }
+
+    main {
+        padding: 5rem 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+}
+
+

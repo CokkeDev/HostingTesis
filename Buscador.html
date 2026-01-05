@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de proyectos de ley</title>
+    <link rel="stylesheet" href="stiloBuscador.css">
+    <meta name="description" content="Descripción de mi página web">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/Imagenes/Senado.png" alt="Logo del buscador de proyectos de ley" class="logo-img">
+                <h1>Buscador de proyectos de ley</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="Buscador.html">Inicio</a></li>
+                <li><a href="Acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+
+        <div class="caja-azul">
+            <div class="contenedor-Buscador">
+                <input type="text" id="searchInput" placeholder="Buscar..." />
+                <button id="searchButton"> 🔍 </button>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <img src="Imagenes/CongresoNacional.jpg" class="active">
+            <img src="Imagenes/CongresoInterno.jpg">
+            <img src="Imagenes/CongresoInterior2.jpg">
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <p>
+                &copy; <span id="anio-actual"></span> Buscador de proyectos de ley.
+                Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="ScriptBsucador.js"></script>
+</body>
+</html>
+
